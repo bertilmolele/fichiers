@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  name: IIS Install and Configuration
+  tasks: 
+  - name: IIS Install
+    script: /etc/ansible/files/script/iis-install.ps1
+  
+  - name: IIS Configuration
+    script: /etc/ansible/files/script/iis-config.ps1
+    
