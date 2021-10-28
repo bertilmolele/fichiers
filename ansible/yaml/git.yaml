@@ -1,8 +1,0 @@
----
-- hosts: windows
-  name: Copy Repo Files
-  tasks:
-    win_command: 
-    - git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/cardabel/cardabel-new3.git C:\cardabel\cardabel 
-    - git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/AudreySn/cardabelnewapplication.git C:\cardabel\cardabelgui
-
