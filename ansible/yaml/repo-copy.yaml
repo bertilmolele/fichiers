@@ -1,0 +1,9 @@
+---
+- hosts: windows
+  name: Copy Repository
+  tasks: 
+  - name: Copy 1st Repo Files
+    win_command: git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/AudreySn/cardabelnewapplication.git C:\cardabelgui
+  - name: Copy 2nd Repo Files
+    win_command: git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/cardabel/cardabel-new3.git C:\cardabel_dir  
+
