@@ -1,0 +1,18 @@
+---
+- hosts: windows
+  name: Install and Config IIS WebServer
+  tasks: 
+  - name: Install Features
+    script: /etc/ansible/files/script/features.ps1
+  - name: Install IIS
+    script: /etc/ansible/files/script/iis-install.ps1
+  - name: Config IIS
+    script: /etc/ansible/files/script/iis-config.ps1
+  - name: Install Database
+    script: /etc/ansible/files/script/db.ps1
+  - name: Install URLrewrite
+    win_command:
+      choco install urlrewrite --Force
+  - name: Reboot Hosts
+    win-reboot:
+      reboot_timeout: 3600

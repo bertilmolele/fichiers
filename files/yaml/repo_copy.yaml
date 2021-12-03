@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  name: Repository Copy Files
+  tasks: 
+  - name: Checkout Repository
+    script: /etc/ansible/files/script/check-repo.ps1
+  - name: 1st Repository Copy
+    win_command: git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/AudreySn/cardabelnewapplication.git C:\cardabelgui --branch 3.2-ANALYSIS-FACTORISATION
+  - name: 2nd Repository Copy
+    win_command: git clone https://molele_bertil:B7%26r5jWB@bitbucket.org/cardabel/cardabel-new3.git C:\cardabel --branch 3.1-RECO

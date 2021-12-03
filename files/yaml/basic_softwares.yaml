@@ -1,0 +1,35 @@
+---
+- hosts: windows
+  name: Install  Basic Sofwares
+  tasks:
+  - name: Chocolatey Drivers
+    win_chocolatey: 
+      name: 
+      - chocolatey
+      - chocolatey-core.extension
+      state: present 
+  - name: Utils Softwares
+    win_chocolatey: 
+      name: 
+      - firefox
+      - googlechrome
+      - git
+      - vscode
+      - pycharm-community
+      - visualstudio2019community
+      - notepadplusplus
+      - mysql-connector
+      - sublimetext3
+      - heidisql
+      - fiddler
+      - nodejs
+      - 7zip
+      - Winrar
+      - teamviewer
+      state: latest
+  - name: Install python 3.7
+    win_command: 
+      choco install python --version=3.7.0 -y --Force
+  - name: restart Hosts
+    win_reboot: 
+      reboot_timeout: 3600
