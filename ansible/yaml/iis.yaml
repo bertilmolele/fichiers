@@ -1,8 +1,0 @@
----
-- hosts: windows
-  name: IIS install and Config
-  tasks:
-  - name: Install features
-    script: /etc/ansible/files/script/features.ps1
-  - name: Config IIS WebServer
-    script: /etc/ansible/files/script/iis-config.ps1
